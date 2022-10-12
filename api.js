@@ -3,7 +3,7 @@ export class Api{
     static token = localStorage.getItem('token')
     static header = {"Content-Type": "application/json",}
     static async reqBody(body, request){
-        const response = await fetch(`${this.baseUrl}/${request}`,{
+        const response = await fetch(`${this.baseUrl}${request}`,{
             method: "POST",
             headers:this.header,
             body: JSON.stringify(body)
