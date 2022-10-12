@@ -14,7 +14,7 @@ export class Api{
         return response
     }
     static async reqGet(request){
-        const response = await fetch(`${this.baseUrl}/${request}`,{
+        const response = await fetch(`${this.baseUrl}${request}`,{
             method: "GET",
             headers:this.header
         })
