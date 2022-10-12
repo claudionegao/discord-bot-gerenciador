@@ -1,3 +1,6 @@
 .titulo{
     color: aqua;
 }
+.guia-ativa{
+    border-right: 0px;
+}
