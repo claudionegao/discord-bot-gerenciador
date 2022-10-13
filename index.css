@@ -1,6 +1,15 @@
-.titulo{
-    color: aqua;
+body{
+    margin: 0px;
 }
-.guia-ativa{
-    border-right: 0px;
+body main{
+    margin: 0px;
+}
+.full{
+    display: flex;
+    flex-direction: column;
+}
+.navbar{
+    background-color: rgb(00, 00,00,0.5);
+    height: 5vh;
+    width: 100vw;
 }
