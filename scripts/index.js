@@ -13,4 +13,6 @@ loginBtn.addEventListener('click',(a)=>{
     }
     const resp = await Api.reqBody(obj,'login')
     console.log(resp)
+    localStorage.setItem('token',resp._id)
+    location.reload()
 }
