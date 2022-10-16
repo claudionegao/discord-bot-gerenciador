@@ -11,6 +11,6 @@ function login() {
         email:email,
         password:password
     }
-    const resp = Api.reqBody(obj,'login')
+    const resp = await Api.reqBody(obj,'login')
     console.log(resp)
 }
