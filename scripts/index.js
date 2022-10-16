@@ -5,12 +5,12 @@ loginBtn.addEventListener('click',(a)=>{
     login()
 })
 function login() {
+    const email = document.getElementById('email').value
+    const password = document.getElementById('password').value
     const obj = {
         email:email,
         password:password
     }
-    const email = document.getElementById('email').value
-    const password = document.getElementById('password').value
     const resp = Api.reqBody(obj,'login')
     console.log(resp)
 }
