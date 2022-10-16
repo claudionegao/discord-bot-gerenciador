@@ -5,10 +5,10 @@ loginBtn.addEventListener('click',(a)=>{
     login()
 })
  async function login() {
-    const email = document.getElementById('email').value
+    const username = document.getElementById('username').value
     const password = document.getElementById('password').value
     const obj = {
-        email:email,
+        username:username,
         password:password
     }
     const resp = await Api.reqBody(obj,'login')
