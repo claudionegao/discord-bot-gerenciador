@@ -16,6 +16,6 @@ async function registrar(){
             password:password,
             discord:discordUser
         }
-    const user = Api.reqBody(obj,register)
+    const user = await Api.reqBody(obj,'register')
     localStorage.setItem('token',user._id)
 }
