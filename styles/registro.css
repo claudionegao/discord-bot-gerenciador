@@ -1,11 +1,10 @@
-body{
+*{
     background-color: #1E1E1E;
     margin: 0px;
-}
-body main{
-    margin: 0px;
+    color: #bdbdbd;
 }
 .full{
+    margin: 0px;
     height: 100vh;
     display: flex;
     flex-direction: column;
