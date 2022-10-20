@@ -3,7 +3,7 @@ let touchstartX = 0
 let touchendX = 0
     
 function checkDirection() {
-const text = document.getElementsByClassName('span')[0]
+const text = document.getElementsByTagName('span')[0]
   if (touchendX < touchstartX) text.textContent = 'swiped left!'
   if (touchendX > touchstartX) text.textContent = 'swiped right!'
 }
