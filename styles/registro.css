@@ -1,0 +1,28 @@
+body{
+    margin: 0px;
+    background-color: #1E1E1E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+.full{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.full input{
+    outline: none;
+    padding: 8px 8px 8px 12px;
+    border: 0px;
+    border-radius: 8px;
+    border-bottom: 2px solid aliceblue;
+}
+.full button{
+    margin-top: 15px;
+    border-radius: 8px;
+    border: 2px solid aliceblue;
+    background-color: #1E1E1E;
+    padding: 8px;
+}
