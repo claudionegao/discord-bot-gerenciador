@@ -24,7 +24,7 @@ async function registrar(){
         username:username.value,
         password:password.value,
         discord:discord.value,
-        picUrl:userPic.value
+        picUrl:userPic.value.replaceAll(" ","")
     }
     const resp = await Api.reqBody(obj,'register')
     if (!resp._id) {
