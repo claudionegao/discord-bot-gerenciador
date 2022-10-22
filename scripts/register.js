@@ -1,7 +1,7 @@
 import { Api } from "./api.js"
 const token = localStorage.getItem('token')
 if (token != undefined) {
-    location.replace('../index.html')
+    //location.replace('../index.html')
 }
 const nome = document.getElementById('nome')
 const username = document.getElementById('username')
@@ -24,7 +24,7 @@ async function registrar(){
         username:username.value,
         password:password.value,
         discord:discord.value,
-        profPic:userPic.value.replaceAll(" ",""),
+        picUrl:userPic.value.replaceAll(" ",""),
         sessionValid:false,
         ficha:{
             Pontos:0,
@@ -50,8 +50,9 @@ async function registrar(){
     const resp = await Api.reqBody(obj,'register')
     if (!resp._id) {
         alert('Cadastro Concluido com Sucesso')
+        console.log(resp)
         localStorage.setItem('token',resp._id)
-        location.replace('../index.html')
+        //location.replace('../index.html')
     }
     else{
         alert(resp.err)
