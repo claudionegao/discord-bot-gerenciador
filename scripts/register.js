@@ -1,7 +1,7 @@
 import { Api } from "./api.js"
 const token = localStorage.getItem('token')
 if (token != undefined) {
-    //location.replace('../index.html')
+    location.replace('../index.html')
 }
 const nome = document.getElementById('nome')
 const username = document.getElementById('username')
@@ -52,7 +52,7 @@ async function registrar(){
         alert('Cadastro Concluido com Sucesso')
         console.log(resp)
         localStorage.setItem('token',resp._id)
-        //location.replace('../index.html')
+        location.replace('../index.html')
     }
     else{
         alert(resp.err)
