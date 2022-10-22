@@ -24,7 +24,28 @@ async function registrar(){
         username:username.value,
         password:password.value,
         discord:discord.value,
-        picUrl:userPic.value.replaceAll(" ","")
+        profPic:userPic.value.replaceAll(" ",""),
+        sessionValid:false,
+        ficha:{
+            Pontos:0,
+            nome:"",
+            Atributos:{
+                Forca:0,
+                Habilidade:0,
+                Resistencia:0,
+                Armadura:0,
+                PoderDeFogo:0,
+            },
+            Hp:0,
+            Mp:0,
+            EXP:5,
+            Vantagens:[],
+            Desvantagens:[],
+            Magias:[],
+            Inventario:[],
+        },
+        formasAlternativas:[],
+        familiares:[]
     }
     const resp = await Api.reqBody(obj,'register')
     if (!resp._id) {
