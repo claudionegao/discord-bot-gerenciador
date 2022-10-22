@@ -20,7 +20,7 @@ async function login(username,password) {
         username:username,
         password:password
     }
-    const resp = await Api.reqBody(body,'login')
+    const resp = await Api.reqPostBody(body,'login')
     if (resp.err == undefined && resp._id != undefined) {
         localStorage.setItem('token',resp._id)
         location.replace("./pages/home.html")

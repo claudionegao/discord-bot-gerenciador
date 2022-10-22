@@ -47,7 +47,7 @@ async function registrar(){
         formasAlternativas:[],
         familiares:[]
     }
-    const resp = await Api.reqBody(obj,'register')
+    const resp = await Api.reqPostBody(obj,'register')
     if (!resp._id) {
         alert('Cadastro Concluido com Sucesso')
         console.log(resp)
