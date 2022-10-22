@@ -21,9 +21,8 @@ async function login(username,password) {
         password:password
     }
     const resp = await Api.reqBody(body,'login')
-    if (resp.err == undefined) {
+    if (resp.err == undefined && resp._id != undefined) {
         localStorage.setItem('token',resp._id)
-        console.log(resp.err)
         location.replace("./pages/home.html")
     }
     else{
