@@ -14,7 +14,7 @@ body button{
     width: 10%;
     padding-right: 18px;
     background-color: var(--background-menu);
-
+    min-width:100px;
 }
 .menu ul{
     background-color: var(--background-menu);
