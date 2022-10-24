@@ -40,6 +40,14 @@ body button{
 .menu ul li *{
     background-color: var(--background-menu);
 }
+.mobile{
+    margin-left: -81px;
+}
+@media(min-width:1040px){
+    .mobile{
+        margin-left: -8.4%;
+    }
+}
 @media(max-width:800px){
     .mobile{
         margin-left: -81px;
