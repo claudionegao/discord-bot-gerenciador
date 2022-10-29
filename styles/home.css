@@ -1,8 +1,12 @@
+html {
+    overscroll-behavior-x: none;
+  }
 :root{
     --background-color:#1E1E1E;
     --background-menu:#353535;
 }
 body{
+    overscroll-behavior-x: none;
     height: 100vh;
 }
 body button{
