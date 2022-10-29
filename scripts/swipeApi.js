@@ -1,21 +1,30 @@
+import { menuSwipe } from "./home.js";
 export class swipe{
-    static touchstartX = 0
-    static touchendX = 0
-        
-    static checkDirection() {
-    const text = document.getElementsByTagName('span')[0]
-    if (touchendX < touchstartX) console.log('swiped left!')
-    if (touchendX > touchstartX) console.log('swiped right!')
+    
+    static checkDirection(touchstartX,touchendX) {
+        const text = document.getElementsByTagName('span')[0]
+        if (touchendX < touchstartX && touchendX != touchstartX) {return false}
+        if (touchendX > touchstartX && touchendX != touchstartX) {return true}
     }
-
-    static init(){
-        document.addEventListener('touchstart', e => {
+    
+    static init(element){
+        let touchstartX = 0
+        let touchendX = 0
+        element.addEventListener('touchstart', e => {
         touchstartX = e.changedTouches[0].screenX
         })
         
-        document.addEventListener('touchend', e => {
+        element.addEventListener('touchend', e => {
         touchendX = e.changedTouches[0].screenX
-        checkDirection()
+        const retorno = swipe.checkDirection(touchstartX,touchendX)
+        if (retorno && retorno != undefined) {
+            const aside = menu.closest('aside')
+            aside.classList.remove('mobile')
+        } 
+        else{
+            const aside = menu.closest('aside')
+            aside.classList.add('mobile')
+        }
         })
     }
     

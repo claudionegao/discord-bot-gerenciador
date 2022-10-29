@@ -1,3 +1,4 @@
+import { swipe } from "./swipeApi.js";
 const logoutBtn = document.getElementById('logout')
 const token = localStorage.getItem('token')
 const menu = document.getElementById('menu')
@@ -6,18 +7,21 @@ if (token==null) {
 }
 logoutBtn.addEventListener('click',(a) =>{
     a.preventDefault()
-    logout()
-})
-function logout() {
     localStorage.removeItem('token')
     location.replace('../index.html')
-}
+})
+const aside = menu.closest('aside')
 menu.addEventListener('click',()=>{
-    const aside = menu.closest('aside')
-    if (aside.classList.contains("mobile")){
+    menuSwipe(aside)
+})
+if (swipe.init(aside)) {
+    console.log('ok')
+}
+export function menuSwipe(aside,swipe) {
+    if (aside.classList.contains("mobile") || swipe){
         aside.classList.remove('mobile')
     }
     else{
         aside.classList.add('mobile')
-    }
-})
+    }    
+}
