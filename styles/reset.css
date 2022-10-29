@@ -4,37 +4,57 @@
     color: #bdbdbd;
 }
 a:after {
-    position: absolute;
-    width: 12em;
-    background-color: #202842;
-    content: attr(tooltip);
-    padding: 0.6em 0;
-    color: #ffffff;
-    margin: auto;
-    left: -4.5em;
-    right: 0;
-    bottom: 1.5em;
-    text-align: center;
-    border-radius: 0.2em;
-  }
-  a:before {
-    position: absolute;
-    content: "";
-    height: 0;
-    width: 0;
-    border-top: 0.5em solid #202842;
-    border-left: 0.5em solid transparent;
-    border-right: 0.5em solid transparent;
-    margin: auto;
-    left: 0;
-    right: 0;
-    bottom: 1.1em;
-  }
-  a:before,
-  a:after {
-    display: none;
-  }
-  a:hover:before,
-  a:hover:after {
-    display: block;
-  }
+  position: absolute;
+  width: 12em;
+  background-color: #202842;
+  content: attr(tooltip);
+  padding: 0.6em 0;
+  color: #ffffff;
+  margin: auto;
+  left: -4.5em;
+  right: 0;
+  bottom: 1.5em;
+  text-align: center;
+ border-radius: 0.2em;
+}
+a:before {
+ position: absolute;
+ content: "";
+ height: 0;
+ width: 0;
+ border-top: 0.5em solid #202842;
+ border-left: 0.5em solid transparent;
+ border-right: 0.5em solid transparent;
+ margin: auto;
+ left: 0;
+ right: 0;
+ bottom: 1.1em;
+}
+a:before,
+a:after {
+  display: none;
+}
+a:hover:before,
+a:hover:after {
+  display: block;
+}
+  /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #353535; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 8px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}

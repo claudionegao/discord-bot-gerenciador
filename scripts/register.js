@@ -27,10 +27,10 @@ async function registrar(){
         picUrl:userPic.value.replaceAll(" ","")
     }
     const resp = await Api.reqPostBody(obj,'register')
-    if (!resp._id) {
+    const id = resp._id
+    if (id != undefined) {
         alert('Cadastro Concluido com Sucesso')
-        console.log(resp)
-        localStorage.setItem('token',resp._id)
+        localStorage.setItem('token',id)
         location.replace('../index.html')
     }
     else{

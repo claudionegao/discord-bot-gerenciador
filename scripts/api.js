@@ -34,4 +34,11 @@ export class Api{
         .catch(err => err)
         return response
     }
+    static async tokenVal(){
+        const resp = await fetch(`${this.baseUrl}login/${localStorage.getItem('token')}`).then(resp => resp).then(resp => resp.json()).catch(err => err)
+        if (resp == false) {
+            localStorage.removeItem('token')
+            location.replace("../index.html")
+        }
+    }
 }
