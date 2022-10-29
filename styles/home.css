@@ -37,3 +37,8 @@ main section{
     border-bottom: 3px dotted rgba(94, 94, 94, 0.333);
     padding-bottom: 25px;
 }
+@media(width<1024px){
+    main section{
+        width: 92.6vw;
+    }
+}

@@ -1,3 +1,7 @@
+:root{
+    --background-color:#1E1E1E;
+    --background-menu:#353535;
+}
 aside{
     position: absolute;
     display: flex;
